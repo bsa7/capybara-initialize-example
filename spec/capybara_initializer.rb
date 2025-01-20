@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
 require 'capybara/rspec'
+require 'capybara-screenshot/rspec'
 
 class CapybaraInitializer
   def call
+    Capybara::Screenshot.autosave_on_failure = true
     Capybara.server = :puma
     # Capybara.default_driver = :selenium_chrome_headless
     Capybara.register_driver :selenium_chrome_headless do |app|
@@ -22,5 +24,9 @@ class CapybaraInitializer
 
     Capybara.javascript_driver = :selenium_chrome_headless
     Capybara.current_driver = :selenium_chrome_headless
+
+    Capybara::Screenshot.register_driver(:selenium_chrome_headless) do |driver, path|
+      driver.browser.save_screenshot(path)
+    end
   end
 end
