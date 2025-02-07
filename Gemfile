@@ -44,7 +44,7 @@ group :development, :test do
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
 
-  gem 'rspec-rails', '7.1.0'
+  gem 'rspec-rails', '7.1.1'
   gem 'selenium-webdriver', '4.27.0'
   gem 'capybara', '3.40.0'
   gem 'capybara-screenshot', '1.0.26'
