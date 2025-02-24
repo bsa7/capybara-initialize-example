@@ -45,7 +45,7 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem 'rspec-rails', '7.1.0'
-  gem 'selenium-webdriver', '4.27.0'
+  gem 'selenium-webdriver', '4.29.1'
   gem 'capybara', '3.40.0'
   gem 'capybara-screenshot', '1.0.26'
 end
